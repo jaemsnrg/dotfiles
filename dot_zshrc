@@ -26,3 +26,8 @@ chezmoi() {
   fi
   return $status
 }
+
+# Source aliases
+if [ -f "$HOME/.aliases" ]; then
+    source "$HOME/.aliases"
+fi
