@@ -1,0 +1,15 @@
+{{- $email := promptStringOnce . "email" "What is your email address?" "jaemsnrg@gmail.com" -}}
+{{- $work := promptBoolOnce . "work" "Is this a work machine?" false -}}
+
+[data]
+    name = "James"
+    email = {{ $email | quote }}
+    work = {{ $work }}
+
+[edit]
+    command = "code"
+    args = ["--wait"]
+
+[git]
+    autoCommit = true  # Automatically creates a Git commit on 'chezmoi apply'
+    autoPush = true    # Automatically pushes commits to remote on 'chezmoi apply'

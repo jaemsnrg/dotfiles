@@ -1,0 +1,15 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Exit immediately if a command fails
+set -euo pipefail
+
+echo "Applying macOS system defaults..."
+
+# Enable dragging window with Ctrl+Cmd + Click anywhere on window
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
+# Example: Fast key repeat rate
+defaults write -g KeyRepeat -int 2
+
+{{ end -}}
