@@ -1,0 +1,28 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
+# This loads nvm bash_completionexport NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
+# pnpm
+export PNPM_HOME="/Users/james/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="$HOME/.local/share/pnpm:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/james/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Keep the chezmoi-autocommit launch agent's WatchPaths in sync whenever
+# new dotfiles are added/re-added to management.
+chezmoi() {
+  command chezmoi "$@"
+  local status=$?
+  if [[ "$1" == "add" || "$1" == "re-add" ]]; then
+    ~/.local/bin/chezmoi-sync-watchpaths.sh
+  fi
+  return $status
+}
