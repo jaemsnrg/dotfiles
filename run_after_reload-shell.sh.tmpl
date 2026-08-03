@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# Reload zsh configuration whenever chezmoi applies changes
+if [ -n "$ZSH_VERSION" ]; then
+    source ~/.zshrc
+fi
