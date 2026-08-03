@@ -7,7 +7,7 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 # ==========================================
 
 # Background Transparency (0.0 = completely invisible, 1.0 = solid)
-background-opacity = 0.8
+background-opacity = 0.5
 
 # macOS Window Blur (higher = softer background bleed)
 background-blur-radius = 20
