@@ -7,6 +7,7 @@ alias czs='chezmoi status'
 alias czcd='cd $(chezmoi source-path)'  # Jump directly to source repo
 alias czu='chezmoi update'             # Pull latest remote changes & apply
 
+
 # Tmux shortcuts
 alias t='tmux'
 alias ta='tmux attach'                  # Attach to last session
