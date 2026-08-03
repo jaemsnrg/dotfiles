@@ -1,0 +1,21 @@
+# Ghostty Auto Light/Dark Switch
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+
+# ==========================================
+# Opacity, Blur & Window Polish (macOS)
+# ==========================================
+
+# Background Transparency (0.0 = completely invisible, 1.0 = solid)
+background-opacity = 0.7
+
+# macOS Window Blur (higher = softer background bleed)
+background-blur-radius = 20
+
+# Hide the bulky top title bar for a seamless, borderless look
+macos-titlebar-style = hidden
+
+# Optional: Add padding inside the window so text doesn't touch screen edges
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true

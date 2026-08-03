@@ -1,0 +1,23 @@
+[user]
+  name = {{ .name | quote }}
+  email = {{ .email | quote }}
+
+[core]
+  editor = nvim
+  autocrlf = input
+
+[alias]
+  st = status
+  co = checkout
+  sw = switch
+  br = branch
+
+[credential]
+{{- if eq .chezmoi.os "darwin" }}
+  helper = osxkeychain
+{{- else if eq .chezmoi.os "linux" }}
+  helper = secret-service
+{{- end }}
+
+[init]
+  defaultBranch = main

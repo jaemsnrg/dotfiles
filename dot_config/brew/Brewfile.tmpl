@@ -1,0 +1,99 @@
+# ==========================================
+# TAPS
+# ==========================================
+tap "anomalyco/tap"
+tap "homebrew/bundle"
+
+# ==========================================
+# SHARED CORE CLI (All OS / All Environments)
+# ==========================================
+brew "chezmoi"
+brew "cliclick"
+brew "coreutils"
+brew "ffmpeg"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "neovim"
+brew "ripgrep"
+brew "starship"
+brew "tmux"
+
+# Custom AI Tools
+brew "anomalyco/tap/opencode", trusted: true
+
+# ==========================================
+# LANGUAGES & RUNTIMES
+# ==========================================
+brew "go"
+brew "node"
+brew "nvm"
+brew "pnpm"
+brew "python@3.14"
+
+# ==========================================
+# CONTAINERS & VIRTUALIZATION
+# ==========================================
+brew "colima"
+brew "docker"
+
+# ==========================================
+# macOS SPECIFIC APPS & CASKS
+# ==========================================
+{{- if eq .chezmoi.os "darwin" }}
+
+# --- CORE CASKS (Shared Mac Apps) ---
+cask "1password"
+cask "arc"
+cask "beekeeper-studio"
+cask "blackhole-2ch"
+cask "blender"
+cask "claude"
+cask "claude-code"
+cask "figma"
+cask "firefox"
+cask "font-jetbrains-mono-nerd-font"
+cask "ghostty"
+cask "godot"
+cask "google-chrome"
+cask "google-gemini"
+cask "localsend"
+cask "logseq"
+cask "notion"
+cask "raycast"
+cask "spotify"
+cask "steam"
+cask "stremio"
+cask "thebrowsercompany-dia"
+cask "transmission"
+cask "visual-studio-code"
+
+# --- WORK-ONLY MAC APPS ---
+{{- if .work }}
+brew "awscli"
+brew "kubectl"
+cask "docker"
+cask "slack"
+cask "zoom"
+{{- end }}
+
+# --- PERSONAL-ONLY MAC APPS ---
+{{- if not .work }}
+cask "discord"
+cask "vlc"
+{{- end }}
+
+{{- end }}
+
+# ==========================================
+# VS CODE EXTENSIONS
+# ==========================================
+vscode "anthropic.claude-code"
+vscode "geequlim.godot-tools"
+vscode "ms-vscode.vscode-speech"
+
+# ==========================================
+# LANGUAGE SPECIFIC PACKAGES
+# ==========================================
+go "golang.org/x/tools/gopls"
+npm "corepack"
