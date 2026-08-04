@@ -1,22 +1,3 @@
-# Chezmoi workflow
-alias cz='chezmoi'
-alias cza='chezmoi apply'
-alias cze='chezmoi edit'
-alias czd='chezmoi diff'
-alias czs='chezmoi status'
-alias czcd='cd $(chezmoi source-path)'  # Jump directly to source repo
-alias czu='chezmoi update'             # Pull latest remote changes & apply
-
-# Tmux shortcuts
-alias t='tmux'
-alias ta='tmux attach'                  # Attach to last session
-alias tat='tmux attach -t'              # Attach to specific session: tat <name>
-alias tls='tmux ls'                     # List sessions
-alias tn='tmux new -s'                  # Create new named session: tn <name>
-alias tk='tmux kill-session -t'         # Kill specific session: tk <name>
-alias tka='tmux kill-session -a'        # Kill all sessions except current
-alias tkall='tmux kill-server'          # Kill all sessions and server
-
 # Git basics
 alias g='git'
 alias gs='git status -s'                # Short status format
@@ -39,3 +20,22 @@ alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 alias gd='git diff'
 alias gds='git diff --staged'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Chezmoi workflow
+alias cz='chezmoi'
+alias cza='chezmoi apply'
+alias cze='chezmoi edit'
+alias czd='chezmoi diff'
+alias czs='chezmoi status'
+alias czcd='cd $(chezmoi source-path)'  # Jump directly to source repo
+alias czu='chezmoi update'             # Pull latest remote changes & apply
+
+# Tmux shortcuts
+alias t='tmux'
+alias ta='tmux attach'                  # Attach to last session
+alias tat='tmux attach -t'              # Attach to specific session: tat <name>
+alias tls='tmux ls'                     # List sessions
+alias tn='tmux new -s'                  # Create new named session: tn <name>
+alias tk='tmux kill-session -t'         # Kill specific session: tk <name>
+alias tka='tmux kill-session -a'        # Kill all sessions except current
+alias tkall='tmux kill-server'          # Kill all sessions and server
