@@ -16,17 +16,6 @@ export PATH="$HOME/.local/share/pnpm:$PATH"
 # Added by Antigravity IDE
 export PATH="/Users/james/.antigravity-ide/antigravity-ide/bin:$PATH"
 
-# Keep the chezmoi-autocommit launch agent's WatchPaths in sync whenever
-# new dotfiles are added/re-added to management.
-chezmoi() {
-  command chezmoi "$@"
-  local status=$?
-  if [[ "$1" == "add" || "$1" == "re-add" ]]; then
-    ~/.local/bin/chezmoi-sync-watchpaths.sh
-  fi
-  return $status
-}
-
 # Source aliases
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
