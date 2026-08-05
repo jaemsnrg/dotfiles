@@ -59,7 +59,7 @@ alias x="glow \"\$(chezmoi source-path)/CHEATSHEET.md\" -p"
 alias czcat='chezmoi cat ~/.aliases'
 
 # Edit Hotkey Cheatsheet
-alias ex='open "$(chezmoi source-path)/CHEATSHEET.md"'
+alias xx='open "$(chezmoi source-path)/CHEATSHEET.md"'
 
 # Test changes
 
