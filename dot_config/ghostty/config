@@ -7,7 +7,7 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 # ==========================================
 
 # Background Transparency (0.0 = completely invisible, 1.0 = solid)
-background-opacity = 1
+background-opacity = 0.8
 
 # macOS Window Blur (higher = softer background bleed)
 background-blur-radius = 20
@@ -20,4 +20,9 @@ window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
 
-# Allow quick tabbing
+# ==========================================
+# Keybindings
+# ==========================================
+
+# Unbind native Ghostty pane split and send Ctrl+A (\x01) to tmux
+keybind = cmd+d=unbind,text:\x01
