@@ -30,3 +30,7 @@ if ! command -v open &> /dev/null; then
     alias open='wslview'
   fi
 fi
+
+
+# --- Color Config ---
+export "MICRO_TRUECOLOR=1"
