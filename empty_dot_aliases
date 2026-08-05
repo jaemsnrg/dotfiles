@@ -44,4 +44,4 @@ alias tkall='tmux kill-server'          # Kill all sessions and server
 
 # Test changes
 
-alias etest='echo "applied"'
+alias etest='echo "applied 1"'
