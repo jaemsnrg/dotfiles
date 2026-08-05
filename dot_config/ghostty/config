@@ -22,3 +22,6 @@ window-padding-balance = true
 
 # Allow quick tabbing
 macos-option-as-alt = true
+
+# Free up cmd+d for tmux
+keybind = cmd+d=text:\x01
