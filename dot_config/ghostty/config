@@ -23,8 +23,3 @@ window-padding-balance = true
 # Allow quick tabbing
 macos-option-as-alt = true
 
-# Unbind default Ghostty native pane split
-keybind = cmd+d=unbind
-
-# Map Cmd+D to send Ctrl+A (\x01) to tmux
-keybind = cmd+d=text:\x01
