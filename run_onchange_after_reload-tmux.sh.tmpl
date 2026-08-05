@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# tmux.conf hash: {{ include "dot_config/tmux/tmux.conf" | sha256sum }}
+
+set -e
+
+TMUX_DIR="${HOME}/.config/tmux"
+TMUX_CONF="${TMUX_DIR}/tmux.conf"
+TPM_DIR="${HOME}/.tmux/plugins/tpm"
+THUMBS_DIR="${HOME}/.tmux/plugins/tmux-thumbs"
+
+# 1. Ensure TPM is cloned
+if [ ! -d "$TPM_DIR" ]; then
+    echo "==> Cloning TPM..."
+    git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
+fi
+
+# 2. Ensure plugins are installed via TPM headless installer
+if [ -f "$TPM_DIR/bin/install_plugins" ]; then
+    echo "==> Installing tmux plugins..."
+    "$TPM_DIR/bin/install_plugins" "$TMUX_CONF"
+fi
+
+# 3. Ensure tmux-thumbs binary is compiled/built
+if [ -d "$THUMBS_DIR" ] && [ ! -f "$THUMBS_DIR/target/release/tmux-thumbs" ]; then
+    echo "==> Building tmux-thumbs..."
+    cd "$THUMBS_DIR"
+    if command -v cargo >/dev/null 2>&1; then
+        cargo build --release --quiet
+    elif [ -f "./tmux-thumbs-install.sh" ]; then
+        sh tmux-thumbs-install.sh
+    fi
+fi
+
+# 4. Reload active tmux server if running
+if tmux info >/dev/null 2>&1; then
+    echo "==> Reloading tmux configuration..."
+    tmux source-file "$TMUX_CONF"
+    tmux display-message "chezmoi: tmux environment updated!" 2>/dev/null || true
+fi
