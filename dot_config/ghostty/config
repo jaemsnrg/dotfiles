@@ -19,3 +19,13 @@ macos-titlebar-style = hidden
 window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
+
+# ==========================================
+# Keybindings
+# ==========================================
+
+# Unbind Ghostty's native split-right so it doesn't intercept cmd+d
+keybind = cmd+d=unbind
+
+# Send the byte for Ctrl+A (0x01) when cmd+d is pressed
+keybind = cmd+d=text:\x01
