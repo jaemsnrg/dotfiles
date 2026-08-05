@@ -8,6 +8,7 @@ alias gca='git commit --amend'
 alias gco='git checkout'
 alias gcb='git checkout -b'             # Create & switch branch
 alias gb='git branch'
+alias gbc='git branch --show-current'
 alias gbd='git branch -d'              # Delete branch
 
 # Sync & remote
