@@ -49,6 +49,7 @@ alias reload='source "${ZDOTDIR:-$HOME}/.zshrc" 2>/dev/null || source ~/.bashrc;
 # General
 
 alias c='clear'
+alias lsa='ls -a'
 
 # List aliases
 alias czcat='chezmoi cat ~/.aliases'
