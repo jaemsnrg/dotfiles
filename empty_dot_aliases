@@ -26,7 +26,7 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias cz='chezmoi'
 alias czl='chezmoi list'
 alias cza='chezmoi apply'
-alias cze='chezmoi edit'
+alias cze='chezmoi edit --apply'
 alias czd='chezmoi diff'
 alias czs='chezmoi status'
 alias czcd='cd $(chezmoi source-path)'  # Jump directly to source repo
