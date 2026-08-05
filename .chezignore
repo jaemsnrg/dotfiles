@@ -1,2 +1,3 @@
-	~/.tmux/plugins/
-    ~/.tmux/resurrect/
+# Tmux dynamic plugins and session persistence state
+.tmux/plugins/**
+.tmux/resurrect/**
