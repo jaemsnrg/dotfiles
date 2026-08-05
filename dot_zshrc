@@ -34,3 +34,5 @@ fi
 
 # --- Color Config ---
 export "MICRO_TRUECOLOR=1"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
