@@ -21,5 +21,3 @@ window-padding-y = 12
 window-padding-balance = true
 
 # Allow quick tabbing
-macos-option-as-alt = true# test Wed  5 Aug 2026 09:21:24 SAST
-# watcher-test Wed  5 Aug 2026 09:22:08 SAST
