@@ -36,7 +36,7 @@ fi
 export "MICRO_TRUECOLOR=1"
 
 
-# FZF --- Configuration ---
+# --- FZF Configuration ---
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --inline-info"
 
 if command -v fd >/dev/null 2>&1; then
@@ -44,10 +44,15 @@ if command -v fd >/dev/null 2>&1; then
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
 
-# Native shell completion & keybindings (macOS/Linux)
+# Load keybindings & completion
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
+
+# FZF Aliases
+alias fe='micro $(fzf)'
+alias gcb='git branch -a | fzf | xargs git checkout'
+
 
 # Pager overwrite
 export PAGER="cat"
