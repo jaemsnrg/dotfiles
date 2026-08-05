@@ -57,7 +57,7 @@ alias reload='source "${ZDOTDIR:-$HOME}/.zshrc" 2>/dev/null || source ~/.bashrc;
 alias c='clear'
 alias lsa='ls -a'
 alias x="glow \"\$(chezmoi source-path)/CHEATSHEET.md\" -p"
-
+alias offtimer='sudo shutdown -h' # in minutes eg. +60 = 1hr
 
 # List Aliases
 alias czcat='chezmoi cat ~/.aliases'
