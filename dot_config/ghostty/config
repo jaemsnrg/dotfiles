@@ -7,7 +7,7 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 # ==========================================
 
 # Background Transparency (0.0 = completely invisible, 1.0 = solid)
-background-opacity = 1
+background-opacity = 0.8
 
 # macOS Window Blur (higher = softer background bleed)
 background-blur-radius = 20
@@ -22,4 +22,3 @@ window-padding-balance = true
 
 # Allow quick tabbing
 macos-option-as-alt = true
-
