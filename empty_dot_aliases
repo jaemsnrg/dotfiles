@@ -15,7 +15,8 @@ alias gm= 'git merge'
 # Sync & remote
 alias gp='git push'
 alias gpf='git push --force-with-lease' # Safer force push
-alias gl='git pull'
+alias gpull='git pull'
+alias gl='git log'
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 
 # Visual logs & diffs
