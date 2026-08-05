@@ -1,6 +1,6 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 # This loads nvm bash_completionexport NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
@@ -20,3 +20,6 @@ export PATH="/Users/james/.antigravity-ide/antigravity-ide/bin:$PATH"
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
+
+export EDITOR="zed --wait"
+export VISUAL="zed --wait"
