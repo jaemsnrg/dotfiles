@@ -67,20 +67,6 @@ All bindings below use the `P` = `Ctrl+A` prefix unless marked `-n` (no prefix n
 
 ---
 
-## 🐚 Zsh / FZF
-
-FZF keybindings are loaded via `fzf --zsh` in `.zshrc`. FZF runs as a reverse-layout picker with a border.
-
-| Shortcut | Action |
-| --- | --- |
-| `Ctrl+T` | Fuzzy-find a file and paste the path onto the command line |
-| `Ctrl+R` | Fuzzy-search command history and paste the selection |
-| `Alt+C` | Fuzzy-find a directory and `cd` into it |
-| `↑ / ↓` | Move selection (in picker) |
-| `Tab` / `Shift+Tab` | Mark / unmark multiple items |
-| `Enter` | Accept selection |
-| `Esc` / `Ctrl+C` / `Ctrl+G` | Cancel |
-
 ### fzf-backed aliases
 
 | Alias | Action |
@@ -183,3 +169,14 @@ Handy commands set up in `.aliases`.
 | `tapp` | `tmux source-file ~/.tmux.conf` | Reload tmux config in running server |
 
 ---
+
+## 🐚 Zsh / FZF
+
+| Shortcut | Action |
+| --- | --- |
+| `Ctrl+T` | Fuzzy-find a file and paste the path onto the command line |
+| `Ctrl+R` | Fuzzy-search command history and paste the selection |
+| `Alt+C` | Fuzzy-find a directory and `cd` into it |
+| `Tab` / `Shift+Tab` | Mark / unmark multiple items |
+| `Enter` | Accept selection |
+| `Esc` / `Ctrl+C` / `Ctrl+G` | Cancel |
