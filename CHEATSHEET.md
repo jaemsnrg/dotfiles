@@ -168,7 +168,7 @@ Handy commands set up in `.aliases`.
 | `tkall` | `tmux kill-server` | Kill tmux server (all sessions) |
 | `tapp` | `tmux source-file ~/.tmux.conf` | Reload tmux config in running server |
 | `mod + s` | View running sessions. Use "x + y" to delete from list |
-| `mod + ctrl + b then ← / → / ↑ / ↓` | View running sessions. Use "x + y" to delete from list |
+| `mod then ← / → / ↑ / ↓` | View running sessions. Use "x + y" to delete from list |
 
 
 ---
