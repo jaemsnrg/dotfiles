@@ -24,6 +24,7 @@ alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 
 # Chezmoi workflow
 alias cz='chezmoi'
+alias czl='chezmoi list'
 alias cza='chezmoi apply'
 alias cze='chezmoi edit'
 alias czd='chezmoi diff'
