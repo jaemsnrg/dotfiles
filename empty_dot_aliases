@@ -43,6 +43,10 @@ alias tka='tmux kill-session -a'        # Kill all sessions except current
 alias tkall='tmux kill-server'          # Kill all sessions and server
 alias tapp='tmux source "${TMUX_CONFIG:-$([ -f ~/.config/tmux/tmux.conf ] && echo ~/.config/tmux/tmux.conf || echo ~/.tmux.conf)}"' # Reload active tmux config dynamically
 
+# Alias master refresh
+alias reload='source "${ZDOTDIR:-$HOME}/.zshrc" 2>/dev/null || source ~/.bashrc; [ -n "$TMUX" ] && tmux source "${TMUX_CONFIG:-$([ -f ~/.config/tmux/tmux.conf ] && echo ~/.config/tmux/tmux.conf || echo ~/.tmux.conf)}" && echo "Shell & Tmux configs reloaded!" || echo "Shell config reloaded!"'
+
+
 # Test changes
 
-alias etest='echo "applied 3"'
+alias etest='echo "applied 4"'
