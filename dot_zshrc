@@ -113,12 +113,14 @@ gwsi() {
   fi
 }
 
-# Interactive Git Worktree Delete (remove worktree directory + optional branch)
 gwdi() {
   local selected target_path branch current_branch
   current_branch=$(git branch --show-current)
 
-  selected=$(git worktree list | grep -v "\[${current_branch}\]" | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
+  selected=$(git worktree list | grep -v "\[${current_branch}\]" | fzf --height 50% --reverse \
+    --delimiter=' ' \
+    --with-nth=3 \
+    --preview 'git log -n 15 --color=always --oneline {1}')
 
   if [ -n "$selected" ]; then
     target_path=$(echo "$selected" | awk '{print $1}')
@@ -134,3 +136,4 @@ gwdi() {
     fi
   fi
 }
+
