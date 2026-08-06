@@ -22,7 +22,7 @@ alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 # Visual logs & diffs
 alias gd='git diff'
 alias gds='git diff --staged'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gl='git log --graph --color=always --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit | tac'
 
 # Chezmoi workflow
 alias cz='chezmoi'
