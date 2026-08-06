@@ -9,12 +9,14 @@
       "mode": "light",
       "pid": "logseq-catppuccin"
     },
+    
     "dark": {
-      "name": "Default Dark Theme",
-      "url": null,
-      "description": "Logseq default dark theme.",
+      "name": "Catppuccin Macchiato",
+      "url": "file:///Users/james/.logseq/plugins/logseq-catppuccin/ctp-macchiato.css",
+      "description": "Catppuccin Macchiato",
       "mode": "dark",
       "selected": true,
+      "pid": "logseq-catppuccin",
       "group-first": true,
       "group-desc": "dark themes"
     }
