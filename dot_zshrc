@@ -60,6 +60,14 @@ gcoi() {
   git checkout $(echo "$branch" | tr -d "* " | cut -d" " -f1 | sed "s/remotes\/origin\///")
 }
 
+# Interactive Git Merge
+gmi() {
+  local branch
+  branch=$(git branch --all --sort=-committerdate | grep -v HEAD | fzf --height 50% --ansi --preview 'git log -n 20 --color=always --oneline $(echo {} | tr -d "* " | cut -d" " -f1)') &&
+  git merge $(echo "$branch" | tr -d "* " | cut -d" " -f1 | sed "s/remotes\/origin\///")
+}
+
+
 # Interactive Git Branch Delete
 gbdi() {
   local branches
