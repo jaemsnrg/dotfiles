@@ -106,6 +106,8 @@ Handy commands set up in `.aliases`.
 
 # 🛠️ Command Line Aliases Cheatsheet
 
+| `offtimer` | +60 - sixty minutes |
+
 ## 🏡 chezmoi (Dotfile Management)
 
 | Alias | Command / Action | Description |
