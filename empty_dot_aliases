@@ -16,14 +16,12 @@ alias gm= 'git merge'
 alias gp='git push'
 alias gpf='git push --force-with-lease' # Safer force push
 alias gpull='git pull'
-alias gl='git log'
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 
 # Visual logs & diffs
 alias gd='git diff'
 alias gds='git diff --staged'
-alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 # Chezmoi workflow
 alias cz='chezmoi'
