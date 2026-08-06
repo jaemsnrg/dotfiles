@@ -58,8 +58,9 @@ alias lsa='ls -a'
 alias x="glow \"\$(chezmoi source-path)/CHEATSHEET.md\" -p"
 alias offtimer='sudo shutdown -h' # in minutes eg. +60 = 1hr
 
-# List Aliases
+# Aliases
 alias czcat='chezmoi cat ~/.aliases'
+alias ea="chezmoi edit --apply ~./.aliases"
 
 # Edit Hotkey Cheatsheet
 alias xx='open "$(chezmoi source-path)/CHEATSHEET.md"'
