@@ -1,21 +1,29 @@
+# --- Path Deduplication & Global System Paths ---
+typeset -U path PATH
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 # --- Node Version Manager (NVM) ---
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # --- PNPM ---
-export PNPM_HOME="/Users/james/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
 # --- IDE & Custom Binaries ---
-export PATH="/Users/james/.antigravity-ide/antigravity-ide/bin:$PATH"
+if [ -d "$HOME/.antigravity-ide/antigravity-ide/bin" ]; then
+  export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+fi
 
-# --- Default Editors ---
+# --- Default Editors & Pager ---
 export EDITOR="micro"
 export VISUAL="micro"
+export PAGER="cat"
+export MICRO_TRUECOLOR=1
 
 # --- Custom Aliases ---
 if [ -f "$HOME/.aliases" ]; then
@@ -30,11 +38,6 @@ if ! command -v open &> /dev/null; then
     alias open='wslview'
   fi
 fi
-
-
-# --- Color Config ---
-export "MICRO_TRUECOLOR=1"
-
 
 # --- FZF Configuration ---
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --inline-info"
@@ -67,7 +70,6 @@ gmi() {
   git merge $(echo "$branch" | tr -d "* " | cut -d" " -f1 | sed "s/remotes\/origin\///")
 }
 
-
 # Interactive Git Branch Delete
 gbdi() {
   local branches
@@ -84,9 +86,7 @@ gbddi() {
         --preview 'git log -n 20 --color=always --oneline {}')
 
   if [ -n "$branches" ]; then
-    # Delete local branches
     echo "$branches" | xargs git branch -D
-    
     # Optional: Delete remote branches on origin
     # echo "$branches" | xargs git push origin --delete
   fi
@@ -98,36 +98,34 @@ gwai() {
   read -r "branch_name?Enter new branch name: "
   [ -z "$branch_name" ] && return 1
 
-  # Default to sibling directory named after the branch
   dir_path="../$branch_name"
-
   git worktree add -b "$branch_name" "$dir_path" && cd "$dir_path"
 }
 
 # Interactive Git Worktree Switch (cd into existing worktree)
 gwsi() {
-  local selected path
+  local selected target_path
   selected=$(git worktree list | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
   
   if [ -n "$selected" ]; then
-    path=$(echo "$selected" | awk '{print $1}')
-    cd "$path" || return
+    target_path=$(echo "$selected" | awk '{print $1}')
+    cd "$target_path" || return
   fi
 }
 
 # Interactive Git Worktree Delete (remove worktree directory + optional branch)
 gwdi() {
-  local selected path branch
-  selected=$(git worktree list | grep -v "\[$(git branch --show-current)\]" | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
+  local selected target_path branch current_branch
+  current_branch=$(git branch --show-current)
+
+  selected=$(git worktree list | grep -v "\[${current_branch}\]" | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
 
   if [ -n "$selected" ]; then
-    path=$(echo "$selected" | awk '{print $1}')
+    target_path=$(echo "$selected" | awk '{print $1}')
     branch=$(echo "$selected" | awk '{print $3}' | tr -d '[]')
 
-    # Remove the worktree directory reference
-    git worktree remove "$path"
+    git worktree remove "$target_path"
 
-    # Prompt to delete associated local branch if desired
     if [ -n "$branch" ]; then
       read -r "reply?Delete associated branch '$branch' as well? (y/N): "
       case "$reply" in
@@ -136,9 +134,3 @@ gwdi() {
     fi
   fi
 }
-
-
-
-
-# Pager overwrite
-export PAGER="cat"
