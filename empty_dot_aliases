@@ -6,10 +6,11 @@ alias gaa='git add --all'
 alias gc='git commit -m'
 alias gca='git commit --amend'
 alias gco='git checkout'
-alias gb='git checkout -b'
+alias gb='git branch'
 alias gbc='git branch --show-current'
+alias gcb='git checkout -b'
 alias gbd='git branch -d'              # Delete branch
-alias gm= 'git merge'
+alias gm='git merge'
 
 # Sync & remote
 alias gp='git push'
