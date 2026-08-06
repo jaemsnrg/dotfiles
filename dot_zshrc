@@ -67,6 +67,7 @@ gbdi() {
   echo "$branches" | xargs git branch -D
 }
 
+# Interactive Git Local + Remote Branch Delete
 gbddi() {
   local branches
   branches=$(git branch --format='%(refname:short)' | 
@@ -82,6 +83,52 @@ gbddi() {
     # echo "$branches" | xargs git push origin --delete
   fi
 }
+
+# Interactive Git Worktree Add (create & checkout new worktree)
+gwai() {
+  local branch_name dir_path
+  read -r "branch_name?Enter new branch name: "
+  [ -z "$branch_name" ] && return 1
+
+  # Default to sibling directory named after the branch
+  dir_path="../$branch_name"
+
+  git worktree add -b "$branch_name" "$dir_path" && cd "$dir_path"
+}
+
+# Interactive Git Worktree Switch (cd into existing worktree)
+gwsi() {
+  local selected path
+  selected=$(git worktree list | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
+  
+  if [ -n "$selected" ]; then
+    path=$(echo "$selected" | awk '{print $1}')
+    cd "$path" || return
+  fi
+}
+
+# Interactive Git Worktree Delete (remove worktree directory + optional branch)
+gwdi() {
+  local selected path branch
+  selected=$(git worktree list | grep -v "\[$(git branch --show-current)\]" | fzf --height 50% --reverse --preview 'git log -n 15 --color=always --oneline {1}')
+
+  if [ -n "$selected" ]; then
+    path=$(echo "$selected" | awk '{print $1}')
+    branch=$(echo "$selected" | awk '{print $3}' | tr -d '[]')
+
+    # Remove the worktree directory reference
+    git worktree remove "$path"
+
+    # Prompt to delete associated local branch if desired
+    if [ -n "$branch" ]; then
+      read -r "reply?Delete associated branch '$branch' as well? (y/N): "
+      case "$reply" in
+        [Yy]*) git branch -D "$branch" ;;
+      esac
+    fi
+  fi
+}
+
 
 
 
