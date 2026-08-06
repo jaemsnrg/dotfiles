@@ -172,6 +172,12 @@ Handy commands set up in `.aliases`.
 | `mod + s` | View running sessions. Use "x + y" to delete from list |
 | `mod then ← / → / ↑ / ↓` | View running sessions. Use "x + y" to delete from list |
 
+- gcoi # interactive git checkout
+- gbdi # Interactive Git Branch Delete
+- gbddi # Interactive Git Local + Remote Branch Delete
+- gwai # Interactive Git Worktree Add
+- gwdi # Interactive Git Worktree Delete (+ optional branch)
+
 
 ---
 
