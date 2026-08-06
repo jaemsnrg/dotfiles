@@ -184,7 +184,8 @@ Handy commands set up in `.aliases`.
   | `mod c` | add new window |
     
 
-- gcoi # interactive git checkout
+- gcoi # Interactive Git Checkout
+- gmi # Interactive Git Merge
 - gbdi # Interactive Git Branch Delete
 - gbddi # Interactive Git Local + Remote Branch Delete
 - gwai # Interactive Git Worktree Add
