@@ -60,7 +60,7 @@ alias offtimer='sudo shutdown -h' # in minutes eg. +60 = 1hr
 
 # Aliases
 alias czcat='chezmoi cat ~/.aliases'
-alias ea="chezmoi edit --apply ~./.aliases"
+alias ea="chezmoi edit --apply ~/.aliases"
 
 # Edit Hotkey Cheatsheet
 alias xx='open "$(chezmoi source-path)/CHEATSHEET.md"'
