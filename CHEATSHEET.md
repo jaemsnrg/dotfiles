@@ -113,6 +113,8 @@ Handy commands set up in `.aliases`.
 | Alias | Command / Action | Description |
 | :--- | :--- | :--- |
 | `cz` | `chezmoi` | Base chezmoi command |
+| `czadd` | `chezmoi add` | Add new config |
+| `czreadd` | `chezmoi re-add` | Re-add config |
 | `czl` | `chezmoi list` | List managed files |
 | `cza` | `chezmoi apply` | Apply changes to home directory |
 | `cze <file>` | `chezmoi edit <file>` | Edit managed source file |
