@@ -67,6 +67,23 @@ gbdi() {
   echo "$branches" | xargs git branch -D
 }
 
+gbddi() {
+  local branches
+  branches=$(git branch --format='%(refname:short)' | 
+    grep -v "^$(git branch --show-current)$" | 
+    fzf --multi --height 50% --reverse \
+        --preview 'git log -n 20 --color=always --oneline {}')
+
+  if [ -n "$branches" ]; then
+    # Delete local branches
+    echo "$branches" | xargs git branch -D
+    
+    # Optional: Delete remote branches on origin
+    # echo "$branches" | xargs git push origin --delete
+  fi
+}
+
+
 
 # Pager overwrite
 export PAGER="cat"
