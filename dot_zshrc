@@ -117,14 +117,21 @@ gwdi() {
   local selected target_path branch current_branch
   current_branch=$(git branch --show-current)
 
-  selected=$(git worktree list | grep -v "\[${current_branch}\]" | fzf --height 50% --reverse \
-    --delimiter=' ' \
-    --with-nth=3 \
-    --preview 'git log -n 15 --color=always --oneline {1}')
+  # Transform the path column to only display the folder name (basename)
+  selected=$(git worktree list | grep -v "\[${current_branch}\]" | awk '{
+    full_path = $1;
+    n = split(full_path, a, "/");
+    $1 = a[n];
+    print $0 "\t" full_path
+  }' | fzf --height 50% --reverse \
+    --delimiter='\t' \
+    --with-nth=1 \
+    --preview 'path=$(echo {2} | awk "{print \$1}"); git log -n 15 --color=always --oneline "$path"')
 
   if [ -n "$selected" ]; then
-    target_path=$(echo "$selected" | awk '{print $1}')
-    branch=$(echo "$selected" | awk '{print $3}' | tr -d '[]')
+    # Extract the full original path attached after the tab delimiter
+    target_path=$(echo "$selected" | awk -F'\t' '{print $2}' | awk '{print $1}')
+    branch=$(echo "$selected" | awk -F'\t' '{print $2}' | awk '{print $3}' | tr -d '[]')
 
     git worktree remove "$target_path"
 
@@ -136,4 +143,5 @@ gwdi() {
     fi
   fi
 }
+
 
