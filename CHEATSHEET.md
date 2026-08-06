@@ -160,6 +160,7 @@ Handy commands set up in `.aliases`.
 
 | Alias | Command / Action | Description |
 | :--- | :--- | :--- |
+
 | `t` | `tmux` | Launch tmux |
 | `ta` | `tmux attach` | Attach to last active session |
 | `tat <name>` | `tmux attach -t <name>` | Attach to a specific session |
@@ -171,6 +172,17 @@ Handy commands set up in `.aliases`.
 | `tapp` | `tmux source-file ~/.tmux.conf` | Reload tmux config in running server |
 | `mod + s` | View running sessions. Use "x + y" to delete from list |
 | `mod then ← / → / ↑ / ↓` | View running sessions. Use "x + y" to delete from list |
+
+  ## Console
+  | `mod + :` | `tmux` | Open Console |
+    Notes - autocomplete tabbing works here
+    - `rename-session` - rename current session
+
+  ## Windows
+  | `mod c` | add new window |
+  | `ctrl + d` | delete current window |
+  | `mod c` | add new window |
+    
 
 - gcoi # interactive git checkout
 - gbdi # Interactive Git Branch Delete
