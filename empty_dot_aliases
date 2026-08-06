@@ -11,6 +11,7 @@ alias gbc='git branch --show-current'
 alias gcob='git checkout -b'
 alias gbd='git branch -d'              # Delete branch
 alias gm='git merge'
+alias gac='git add --all && git commit -m'
 
 # Sync & remote
 alias gp='git push'
