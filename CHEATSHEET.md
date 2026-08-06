@@ -184,12 +184,14 @@ Handy commands set up in `.aliases`.
   | `mod c` | add new window |
     
 
-- gcoi # Interactive Git Checkout
-- gmi # Interactive Git Merge
-- gbdi # Interactive Git Branch Delete
-- gbddi # Interactive Git Local + Remote Branch Delete
-- gwai # Interactive Git Worktree Add
-- gwdi # Interactive Git Worktree Delete (+ optional branch)
+## Interactive git
+- gcoi # Git Checkout
+- gmi # Git Merge
+- gbdi # Git Branch Delete
+- gbddi # Git Local + Remote Branch Delete
+- gwai # Git Worktree Add
+- gwdi # Git Worktree Delete (+ optional branch)
+- gwsi # Git Worktree Switch
 
 
 ---
