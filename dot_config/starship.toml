@@ -2,13 +2,13 @@
 
 add_newline = true
 
+# Standard newline between line 1 (info) and line 2 (prompt character)
 format = """
 $directory\
 $git_branch\
 $git_status\
 $nodejs\
-$cmd_duration\
-$line_break\
+$cmd_duration
 $character"""
 
 [character]
