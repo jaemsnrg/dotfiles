@@ -68,6 +68,17 @@ bindkey '\er' fzf-history-widget
 alias fe='micro $(fzf)'
 alias gcb='git branch -a | fzf | xargs git checkout'
 
+# Reset soft: defaults to 1 commit back (HEAD~1) if no argument is passed
+grs() {
+  local count="${1:-1}"
+  git reset --soft "HEAD~${count}"
+}
+
+# Reset hard: defaults to HEAD if no target is passed (or accepts origin/main, commit hashes, etc.)
+grh() {
+  git reset --hard "${1:-HEAD}"
+}
+
 # Interactive Git Checkout
 gcoi() {
   local branch
