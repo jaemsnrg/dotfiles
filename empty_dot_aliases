@@ -46,7 +46,15 @@ alias tk='tmux kill-session -t'         # Kill specific session: tk <name>
 alias tka='tmux kill-session -a'        # Kill all sessions except current
 alias tkall='tmux kill-server'          # Kill all sessions and server
 alias tapp='tmux source "${TMUX_CONFIG:-$([ -f ~/.config/tmux/tmux.conf ] && echo ~/.config/tmux/tmux.conf || echo ~/.tmux.conf)}"' # Reload active tmux config dynamically
-alias tnn='tmux new-session -d -s'
+
+tn() {
+  if [ -n "$TMUX" ]; then
+    tmux new-session -d -s "$1" && tmux switch-client -t "$1"
+  else
+    tmux new-session -s "$1"
+  fi
+}
+
 
 
 # Alias master refresh
