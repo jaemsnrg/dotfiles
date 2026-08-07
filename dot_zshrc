@@ -171,12 +171,13 @@ function tn() {
   fi
 
   if [ -n "$TMUX" ]; then
-    # Inside tmux: create detached and switch client
+    # Inside tmux: create session detached (-d) and switch client
     tmux new-session -d -s "$1" && tmux switch-client -t "$1"
   else
-    # Outside tmux: launch and attach
+    # Outside tmux: launch and attach normally
     tmux new-session -s "$1"
   fi
 }
+
 
 
