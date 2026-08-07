@@ -37,7 +37,7 @@ alias czcd='cd $(chezmoi source-path)'  # Jump directly to source repo
 alias czu='chezmoi update'             # Pull latest remote changes & apply
 
 # Tmux shortcuts
-alias t='tmux'
+alias t="tmux attach-session -t main 2>/dev/null || tmux new-session -s main"
 alias ta='tmux attach'                  # Attach to last session
 alias tat='tmux attach -t'              # Attach to specific session: tat <name>
 alias tls='tmux ls'                     # List sessions
