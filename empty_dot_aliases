@@ -41,7 +41,6 @@ alias t="tmux attach-session -t main 2>/dev/null || tmux new-session -s main"
 alias ta='tmux attach'                  # Attach to last session
 alias tat='tmux attach -t'              # Attach to specific session: tat <name>
 alias tls='tmux ls'                     # List sessions
-alias tn='tmux new -s'                  # Create new named session: tn <name>
 alias tk='tmux kill-session -t'         # Kill specific session: tk <name>
 alias tka='tmux kill-session -a'        # Kill all sessions except current
 alias tkall='tmux kill-server'          # Kill all sessions and server
