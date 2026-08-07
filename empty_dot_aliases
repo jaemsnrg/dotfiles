@@ -1,4 +1,4 @@
-# Git basics
+1;4B# Git basics
 alias g='git'
 alias gs='git status'
 alias ga='git add'
@@ -12,6 +12,8 @@ alias gcob='git checkout -b'
 alias gbd='git branch -d'              # Delete branch
 alias gm='git merge'
 alias gac='git add --all && git commit -m'
+alias grs='git reset --soft head~'
+
 
 # Sync & remote
 alias gp='git push'
