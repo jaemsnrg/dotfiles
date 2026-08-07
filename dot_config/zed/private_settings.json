@@ -32,4 +32,7 @@
     "light": "One Light",
     "dark": "Catppuccin Macchiato",
   },
+  "project_panel": {
+    "dock": "left"
+  }
 }
