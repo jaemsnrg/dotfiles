@@ -29,3 +29,9 @@ keybind = cmd+d=unbind
 
 # Send the byte for Ctrl+A (0x01) when cmd+d is pressed
 keybind = cmd+d=text:\x01
+
+# Map Cmd+E to send Alt+E to the shell/fzf
+keybind = cmd+e=text:\x1be
+
+# Map Cmd+R to send Alt+R to the shell/fzf
+keybind = cmd+r=text:\x1br
