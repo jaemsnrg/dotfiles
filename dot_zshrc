@@ -161,3 +161,23 @@ alias ls="eza"
 alias l="eza -la --icons"
 alias tree="eza --tree"
 eval "$(starship init zsh)"
+
+# Tmux session creation
+
+tn() {
+  if [ -z "$1" ]; then
+    echo "Usage: tn <session-name>"
+    return 1
+  fi
+
+  if [ -n "$TMUX" ]; then
+    # We are ALREADY inside tmux:
+    # 1. Create the new session detached (-d)
+    # 2. Switch our active tmux client to it
+    tmux new-session -d -s "$1" && tmux switch-client -t "$1"
+  else
+    # We are OUTSIDE tmux: launch and attach normally
+    tmux new-session -s "$1"
+  fi
+}
+
