@@ -151,4 +151,7 @@ gwdi() {
   fi
 }
 
-
+# Nix-backed eza aliases
+alias ls="nix run github:eza-community/eza --"
+alias l="nix run github:eza-community/eza -la --icons"
+alias tree="nix run github:eza-community/eza --tree"
