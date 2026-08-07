@@ -65,6 +65,10 @@ alias ea="chezmoi edit --apply ~/.aliases"
 # Edit Hotkey Cheatsheet
 alias xx='open "$(chezmoi source-path)/CHEATSHEET.md"'
 
+# Temporary
+
+alias dsr='./run.sh'
+
 # Test changes
 
 alias etest='echo "applied 4"'
