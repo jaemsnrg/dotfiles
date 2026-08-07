@@ -1,4 +1,4 @@
-1;4B# Git basics
+# Git basics
 alias g='git'
 alias gs='git status'
 alias ga='git add'
