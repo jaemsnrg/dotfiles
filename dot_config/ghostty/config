@@ -6,8 +6,13 @@ theme = dark:Catppuccin Macchiato,light:Catppuccin Latte
 # Opacity, Blur & Window Polish (macOS)
 # ==========================================
 
-# Background Transparency (0.0 = completely invisible, 1.0 = solid)
-background-opacity = 1
+# Background Transparency + Blur
+background-opacity = 0.9
+background-blur-radius = 20
+
+# Custom Cursor Styles
+cursor-style = bar
+cursor-style-blink = true
 
 # macOS Window Blur (higher = softer background bleed)
 background-blur-radius = 20
