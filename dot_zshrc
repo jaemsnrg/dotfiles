@@ -156,7 +156,7 @@ gwdi() {
   fi
 }
 
-# Nix-backed eza aliases
-alias ls="nix run github:eza-community/eza --"
-alias l="nix run github:eza-community/eza -la --icons"
-alias tree="nix run github:eza-community/eza --tree"
+# Target stable nixpkgs for eza
+alias ls="nix run nixpkgs#eza --"
+alias l="nix run nixpkgs#eza -- -la --icons"
+alias tree="nix run nixpkgs#eza -- --tree"
