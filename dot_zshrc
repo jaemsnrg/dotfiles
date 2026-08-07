@@ -156,7 +156,7 @@ gwdi() {
   fi
 }
 
-# Target stable nixpkgs for eza
-alias ls="nix run nixpkgs#eza --"
-alias l="nix run nixpkgs#eza -- -la --icons"
-alias tree="nix run nixpkgs#eza -- --tree"
+# Fast eza aliases
+alias ls="eza"
+alias l="eza -la --icons"
+alias tree="eza --tree"
