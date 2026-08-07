@@ -52,6 +52,15 @@ if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
 
+# Ensure fzf zsh integration is loaded
+source <(fzf --zsh)
+
+# Map Cmd+E (sending Alt+E) to fuzzy-find files
+bindkey '\xe5' fzf-file-widget
+
+# Map Cmd+R (sending Alt+R) to fuzzy-search command history
+bindkey '\xc2' fzf-history-widget
+
 # FZF Aliases
 alias fe='micro $(fzf)'
 alias gcb='git branch -a | fzf | xargs git checkout'
