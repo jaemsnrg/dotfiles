@@ -160,3 +160,4 @@ gwdi() {
 alias ls="eza"
 alias l="eza -la --icons"
 alias tree="eza --tree"
+eval "$(starship init zsh)"
