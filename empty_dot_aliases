@@ -11,16 +11,13 @@ alias gbc='git branch --show-current'
 alias gcob='git checkout -b'
 alias gbd='git branch -d'              # Delete branch
 alias gm='git merge'
-alias gfo='git fetch origin'
-alias gpl='git pull'
-alias log='git --oneline --graph --left-right HEAD...@{upstream}'
-
 
 # Sync & remote
 alias gp='git push'
 alias gpf='git push --force-with-lease' # Safer force push
-alias gpull='git pull'
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
+alias gpl='git pull'
+alias gcompareremote='git --oneline --graph --left-right HEAD...@{upstream}'
 
 # Visual logs & diffs
 alias gd='git diff'
