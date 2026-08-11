@@ -155,6 +155,7 @@ Handy commands set up in `.aliases`.
 | `gd` | `git diff` | Show uncommitted changes |
 | `gds` | `git diff --staged` | Show staged changes |
 | `glg` | `git log --graph --oneline` | Display pretty commit log graph |
+| `gcompareremote` | `git --oneline --graph --left-right HEAD...@{upstream}` | Compare local branch with remote |
 
 ---
 

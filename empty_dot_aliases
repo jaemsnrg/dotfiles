@@ -16,7 +16,6 @@ alias gm='git merge'
 alias gp='git push'
 alias gpf='git push --force-with-lease' # Safer force push
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
-alias gpl='git pull'
 alias gcompareremote='git --oneline --graph --left-right HEAD...@{upstream}'
 
 # Visual logs & diffs
