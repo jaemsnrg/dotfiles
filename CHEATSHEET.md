@@ -141,6 +141,7 @@ Handy commands set up in `.aliases`.
 | `gco` | `git checkout` | Switch branch or restore file |
 | `gbc` | `git branch --merged` | Show merged branches |
 | `gbd` | `git branch -d` | Delete branch |
+| `gsl` | `git stash list --pretty=...` | Pretty print formatted list of stashes with relative time |
 
 ---
 
@@ -192,9 +193,18 @@ Handy commands set up in `.aliases`.
 - gmi # Git Merge
 - gbdi # Git Branch Delete
 - gbddi # Git Local + Remote Branch Delete
+
+## Worktrees
 - gwai # Git Worktree Add
 - gwdi # Git Worktree Delete (+ optional branch)
 - gwsi # Git Worktree Switch
+
+## Stashes
+- gsl # Git Stash List
+- gsai # Git Stash Apply (interactive pick & apply with live diff preview)
+-	gspi # Git Stash Pop (interactive pick, apply & remove with live diff preview)
+-	gsdi # Git Stash Drop (interactive multi-select drop with live diff preview)
+-	gssi # Git Stash Save (prompt for custom stash message)
 
 
 ---
