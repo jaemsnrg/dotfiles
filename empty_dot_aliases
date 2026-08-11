@@ -18,6 +18,9 @@ alias gpf='git push --force-with-lease' # Safer force push
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 alias gcompareremote='git log --oneline --graph --left-right HEAD...@{upstream}'
 
+# Git stashing
+alias gsl="git stash list --date=relative"
+
 # Visual logs & diffs
 alias gd='git diff'
 alias gds='git diff --staged'
