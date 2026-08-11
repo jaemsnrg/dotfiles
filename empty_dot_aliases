@@ -11,6 +11,9 @@ alias gbc='git branch --show-current'
 alias gcob='git checkout -b'
 alias gbd='git branch -d'              # Delete branch
 alias gm='git merge'
+alias gfo='git fetch origin'
+alias gpl='git pull'
+alias log='git --oneline --graph --left-right HEAD...@{upstream}'
 
 
 # Sync & remote
