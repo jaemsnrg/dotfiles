@@ -137,6 +137,7 @@ Handy commands set up in `.aliases`.
 | `gc` | `git commit` | Commit staged changes |
 | `gca` | `git commit --amend` | Amend last commit |
 | `gb` | `git branch` | List local branches |
+| `gcl` | `git clone` | Clone a repository |
 | `gcob` | `git checkout -b` | Create and switch to new branch |
 | `gco` | `git checkout` | Switch branch or restore file |
 | `gbc` | `git branch --merged` | Show merged branches |
