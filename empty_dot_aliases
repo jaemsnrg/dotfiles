@@ -11,7 +11,7 @@ alias gbc='git branch --show-current'
 alias gcob='git checkout -b'
 alias gbd='git branch -d'
 alias gm='git merge'
-alias glc='git clone'
+alias gcl='git clone'
 
 # Sync & remote
 alias gp='git push'
