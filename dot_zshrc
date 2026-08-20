@@ -223,6 +223,10 @@ alias l="eza -la --icons"
 alias tree="eza --tree"
 eval "$(starship init zsh)"
 
+# List running processes on TCP ports
+
+alias lsports="lsof -iTCP -sTCP:LISTEN -P -n"
+
 # Tmux session creation
 
 function tn() {

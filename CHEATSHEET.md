@@ -146,6 +146,12 @@ Handy commands set up in `.aliases`.
 
 ---
 
+## Networking
+
+| `lsports` | `lsof -iTCP -sTCP:LISTEN -P -n` | List open TCP ports |
+
+---
+
 ## 🔄 Git Syncing & History
 
 | Alias | Command / Action | Description |
