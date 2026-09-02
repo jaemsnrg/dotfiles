@@ -255,4 +255,14 @@ function tn() {
 }
 
 
+# List npm scripts
+
+_list_scripts() {
+  for f in **/package.json(N); do
+    echo "=== ${f%/*} ==="
+    jq -r '.scripts | keys[]?' "$f" 2>/dev/null
+    echo ""
+  done
+}
+alias nsl="_list_scripts"
 
