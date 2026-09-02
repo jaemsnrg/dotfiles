@@ -68,6 +68,14 @@ All bindings below use the `P` = `Ctrl+A` prefix unless marked `-n` (no prefix n
 
 ---
 
+## 📝 Npm Package
+
+| Shortcut | Action |
+| --- | --- |
+| `nsl` | **List scripts** recursively list scripts in package.json's through project |
+
+---
+
 ## 🔌 tmux Plugins
 
 ### TPM (`tmux-plugins/tpm`)
