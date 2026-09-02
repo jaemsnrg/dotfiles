@@ -205,6 +205,7 @@ Handy commands set up in `.aliases`.
 | Alias | Command / Action | Description |
 | :--- | :--- | :--- |
 | `gp` | `git push` | Push commits to remote |
+| `gpl` | `git pull` | Pull commits from remote |
 | `gpf` | `git push --force-with-lease` | Safe force push |
 | `gl` | `git pull` | Pull changes from remote |
 | `gf` | `git fetch --prune` | Fetch and prune deleted remote branches |
