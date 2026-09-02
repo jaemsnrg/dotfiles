@@ -176,6 +176,7 @@ Handy commands set up in `.aliases`.
 | Alias | Command / Action | Description |
 | :--- | :--- | :--- |
 | `g` | `git` | Base git command |
+| `gr` | `git remote -v` | List remote repositories |
 | `gs` | `git status` | Show working tree status |
 | `ga` | `git add` | Stage specific changes |
 | `gaa` | `git add --all` | Stage all changes |
