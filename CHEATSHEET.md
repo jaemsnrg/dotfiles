@@ -31,6 +31,43 @@ All bindings below use the `P` = `Ctrl+A` prefix unless marked `-n` (no prefix n
 
 ---
 
+## 🐳 Docker
+
+### Core Docker Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `d` | Base `docker` command |
+| `dcls` | List running containers (`docker container ls`) |
+| `dps` | **P**retty-print running containers with names, status, and ports |
+| `dlogs` | Follow container **logs** (last 100 lines) |
+
+### Container Management
+
+| Shortcut | Action |
+| --- | --- |
+| `dstop` | **Stop** container gracefully |
+| `dkill` | **Kill** container forcefully |
+| `drestart` | **Restart** container |
+| `dexec` | **Exec**ute interactive shell in container (Usage: `dexec <name> sh`) |
+
+### Docker Compose Shortcuts
+
+| Shortcut | Action |
+| --- | --- |
+| `dcup` | **Up** compose services in background (detached mode) |
+| `dcdown` | **Down** and remove compose containers and networks |
+| `dclogs` | Follow live **logs** for all compose services |
+| `dcps` | List compose **ps** status |
+
+### Docker System Cleanup
+
+| Shortcut | Action |
+| --- | --- |
+| `dclean` | **Clean** system (prune all unused containers, images, and volumes) |
+
+---
+
 ## 🔌 tmux Plugins
 
 ### TPM (`tmux-plugins/tpm`)
