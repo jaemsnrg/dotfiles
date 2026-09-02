@@ -15,15 +15,13 @@ alias gm='git merge'
 alias gcl='git clone'
 alias gt='git tag'
 alias gpt='git push --tags'
+alias gsl="git stash list --date=relative"
 
 # Sync & remote
 alias gp='git push'
 alias gpf='git push --force-with-lease' # Safer force push
 alias gf='git fetch --all --prune'      # Fetch and trim deleted remote branches
 alias gcompareremote='git log --oneline --graph --left-right HEAD...@{upstream}'
-
-# Git stashing
-alias gsl="git stash list --date=relative"
 
 # Visual logs & diffs
 alias gd='git diff'
