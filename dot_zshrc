@@ -227,6 +227,16 @@ eval "$(starship init zsh)"
 
 alias lsports="lsof -iTCP -sTCP:LISTEN -P -n"
 
+killport() {
+  if [ -z "$1" ]; then
+    echo "Usage: killport <port_number> [additional_ports...]"
+  else
+    lsof -ti:"$@" | xargs kill -9 2>/dev/null && echo "Port(s) $@ cleared." || echo "No process found on port(s) $@."
+  fi
+}
+
+alias kp="killport"
+
 # Tmux session creation
 
 function tn() {

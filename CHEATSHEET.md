@@ -186,6 +186,8 @@ Handy commands set up in `.aliases`.
 ## Networking
 
 | `lsports` | `lsof -iTCP -sTCP:LISTEN -P -n` | List open TCP ports |
+| `killport` | Force kill process on target port(s) | `killport 3000` or `killport 3000 9000` |
+| `kp` | Quick alias to force kill port | `kp 3000` |
 
 ---
 
