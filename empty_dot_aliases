@@ -81,7 +81,7 @@ alias etest='echo "applied 4"'
 
 # Docker
 alias d="docker"
-alias dcls='docker container ls'
+alias dcls='docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"'
 alias dps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'"
 alias dlogs="docker logs -f --tail 100"
 
