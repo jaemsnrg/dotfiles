@@ -35,6 +35,9 @@ if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
 
+# --- Custom Shell Functions (~/.config/zsh/*.zsh) ---
+for f in "$HOME"/.config/zsh/*.zsh(N); do source "$f"; done
+
 # --- Cross-Platform Open Command ---
 if ! command -v open &> /dev/null; then
   if command -v xdg-open &> /dev/null; then
