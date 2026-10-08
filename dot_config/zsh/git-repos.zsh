@@ -1,6 +1,6 @@
 # List top-level git repos under a root (default ~/Documents).
 # Skips nested repos, worktrees/submodules, and folders ending in " copy".
-git-repos() {
+grl() {
   local root="${1:-$HOME/Documents}"
   find "$root" \( -name node_modules -o -name .next -o -name dist -o -name build -o -name target \
        -o -name .venv -o -name venv -o -name .godot -o -name .cache -o -name .turbo \) -prune -o \
@@ -15,7 +15,7 @@ git-repos() {
 # Interactive Git Repo picker (fuzzy-search repos and cd into the selection)
 gri() {
   local selected
-  selected=$(git-repos "$@" | fzf --height 50% --reverse \
+  selected=$(grl "$@" | fzf --height 50% --reverse \
     --preview 'git -C {} log -n 15 --color=always --oneline; echo; git -C {} status -sb')
 
   [ -n "$selected" ] && cd "$selected"
