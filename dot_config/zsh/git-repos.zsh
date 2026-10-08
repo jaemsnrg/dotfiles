@@ -11,3 +11,12 @@ git-repos() {
     | awk '{ for (i = 0; i < n; i++) if (index($0, kept[i] "/") == 1) next
              kept[n++] = $0; print }'
 }
+
+# Interactive Git Repo picker (fuzzy-search repos and cd into the selection)
+gri() {
+  local selected
+  selected=$(git-repos "$@" | fzf --height 50% --reverse \
+    --preview 'git -C {} log -n 15 --color=always --oneline; echo; git -C {} status -sb')
+
+  [ -n "$selected" ] && cd "$selected"
+}

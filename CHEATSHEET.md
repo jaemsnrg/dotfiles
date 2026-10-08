@@ -250,6 +250,10 @@ Handy commands set up in `.aliases`.
 - gbdi # Git Branch Delete
 - gbddi # Git Local + Remote Branch Delete
 
+## Repos
+- git-repos # List top-level git repos under ~/Documents (or a given root); skips nested repos, worktrees, "copy" folders
+- gri # Git Repo picker (fuzzy-search repos with log/status preview, cd into selection; optional root arg)
+
 ## Worktrees
 - gwai # Git Worktree Add
 - gwdi # Git Worktree Delete (+ optional branch)
