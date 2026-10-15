@@ -200,6 +200,17 @@ Handy commands set up in `.aliases`.
 
 ---
 
+## Performance
+
+| Alias | Command / Action | Description |
+| :--- | :--- | :--- |
+| `perfcheck` | One-shot system snapshot (`dot_config/zsh/50-perf.zsh`) | Diagnose where your Mac's performance is going: load vs. core count (red >100%, yellow >70%), thermal/battery state, instantaneous CPU usage, top processes by CPU, CPU + memory grouped by app, memory breakdown (active/wired/compressed/free, swap, pressure), top processes by memory, disk I/O, and long-running CPU hogs (>50% CPU, up >30min) |
+| `perfcheck -n 20` | Show top 20 entries instead of the default 10 | Widen the process/app/memory lists |
+| `perfcheck -w` | Watch mode | Clear and refresh the report every 5s (Ctrl-C to stop) |
+| `perfcheck -n 5 -w` | Flags combine | Compact live view |
+
+---
+
 ## 🔄 Git Syncing & History
 
 | Alias | Command / Action | Description |
