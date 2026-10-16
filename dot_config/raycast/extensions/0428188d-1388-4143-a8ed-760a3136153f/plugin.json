@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "terminalfinder",
+  "description": "Open currently selected Finder (or Path Finder) window in Terminal (or iTerm2, Warp, WezTerm, cmux, Tern) and vice versa",
+  "author": {
+    "name": "yedongze"
+  },
+  "license": "MIT"
+}
