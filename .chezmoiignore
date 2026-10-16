@@ -1,0 +1,3 @@
+# Raycast exports and installed extensions are not managed
+backups
+.config/raycast/extensions
