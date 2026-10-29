@@ -36,5 +36,7 @@ if [ -f "$HOME/.aliases" ]; then
 fi
 
 # --- Modular config: ~/.config/zsh/*.zsh (loaded in filename order) ---
-#   10-fzf  20-git  30-terminal  40-dev-tools  50-perf  git-repos
+#   10-fzf  20-git  30-terminal  40-dev-tools  git-repos
 for f in "$HOME"/.config/zsh/*.zsh(N); do source "$f"; done
+export PATH=/opt/homebrew/opt/openjdk/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"

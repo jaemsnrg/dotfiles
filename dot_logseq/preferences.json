@@ -9,7 +9,6 @@
       "mode": "light",
       "pid": "logseq-catppuccin"
     },
-    
     "dark": {
       "name": "Catppuccin Macchiato",
       "url": "file:///Users/james/.logseq/plugins/logseq-catppuccin/ctp-macchiato.css",
