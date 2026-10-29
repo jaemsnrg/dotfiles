@@ -151,7 +151,9 @@ Handy commands set up in `.aliases`.
 
 # 🛠️ Command Line Aliases Cheatsheet
 
-| `offtimer` | +60 - sixty minutes |
+| Alias | Command / Action | Description |
+| :--- | :--- | :--- |
+| `offtimer <+min>` | `sudo shutdown -h` | Shut down the Mac after a delay in minutes, e.g. `offtimer +60` = 1hr |
 
 ## 🏡 chezmoi (Dotfile Management)
 
